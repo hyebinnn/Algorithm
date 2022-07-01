@@ -14,9 +14,8 @@ def gotoFestival(hx, hy, store, fx, fy):
         sy.append(store[i][1])
     # print('sx: ', sx)
     # print('sy: ', sy)
-    total_dis = abs(fx - hx) + abs(fy - hy)  # festival과 home 간의 거리
-    need = total_dis  # 총 필요한 beer 수
-    if need <= 20:
+    total_dis = abs(fx - hx) + abs(fy - hy)  # festival과 home 간의 거리 = 총 필요한 beer 수
+    if total_dis <= 20:
         return 'happy'  # 편의점 들리지 않고 바로 축제로 갈 수 있는 경우
     else:
         xx, yy = hx, hy
@@ -31,7 +30,7 @@ def gotoFestival(hx, hy, store, fx, fy):
                     drink[nx][ny] = drink[x][y] - 1                 # 맥주 1병씩 drink
                     # print('nx, ny: ', (nx, ny))
                     # print('beer: ', drink[nx][ny])
-                    if len(sx)!=0 and len(sy)!=0:
+                    if n!=0:
                         for j in range(n):
                             if (nx, ny) == (sx[j], sy[j]) and drink[nx][ny] >= 0:       # 편의점 무사히 도착
                                 drink[nx][ny] = 20
@@ -59,18 +58,11 @@ for _ in range(t):
         store.append((a//50, b//50))
     fx, fy = map(int, input().split())
     fx, fy = fx//50, fy//50
-    #print('store', store)
-    #print(hx, hy)
-    #print(fx, fy)
-    # print('fx, fy ', fx, fy)
     spacelen = max(max_sx, fx)
     spacewid = max(max_sy, fy)
     drink = [[-1]*(spacewid+1) for _ in range(spacelen+1)]       # [[열] * 행]
     visited = [[False] * (spacewid + 1) for _ in range(spacelen + 1)]
     drink[hx][hy] = 20
-    # print('y: ', spacewid, 'x: ', spacelen)
-    # print('y: ', len(drink[0]), 'x: ', len(drink))
-
     result.append(gotoFestival(hx, hy, store, fx, fy))
 
 for p in result:
