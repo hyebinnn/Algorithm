@@ -1,3 +1,5 @@
+# 배열 돌리기 2
+
 import sys
 
 N, M, R = map(int, sys.stdin.readline().split())
@@ -26,13 +28,13 @@ def rotate(i, j, n, m):
     array[i][m-2] = right
 
 
-deep = min(N, M) // 2  # 몇번이나 안쪽으로 들어가는지?
-cycle = (N - 1) * 2 + (M - 1) * 2  # 4x4 경우, 둘레 = 12 -> 12번 돌면 원상복구
+deep = min(N, M) // 2                   # 몇번이나 안쪽으로 들어가는지?
+cycle = (N - 1) * 2 + (M - 1) * 2       # 4x4 경우, 둘레 = 12 -> 12번 돌면 원상복구
 
-for i in range(deep):  # 겉 - 안쪽 - 안쪽 ... 순으로
-    for _ in range(R % cycle):  # 회전 횟수 압축
+for i in range(deep):                   # 겉 - 안쪽 - 안쪽 ... 순으로
+    for _ in range(R % cycle):          # 회전 횟수 압축
         rotate(i, i, N - i, M - i)
-    cycle -= 8  # 겉과 안쪽의 둘레 차 (규칙적으로 -8) = 8칸 차이
+    cycle -= 8                          # 겉과 안쪽의 둘레 차 (규칙적으로 -8) = 8칸 차이
 
 for x in array:
     print(*x, sep=' ')
