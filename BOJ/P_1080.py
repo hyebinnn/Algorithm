@@ -14,7 +14,7 @@ def convert(i, j):
             else:   A[x][y] = 0
 
 cnt = 0
-if N < 3 or M < 3 and A!=B:         # 예외
+if N < 3 or M < 3 and A != B:         # 예외
     cnt = -1
 else:
     for i in range(N-2):
