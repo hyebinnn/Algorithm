@@ -21,7 +21,23 @@
 #                 break
 #     return answer
 from collections import Counter
+# from itertools import combinations
+#
+# s = [[2, 0, 0, 0, 1, 1, 0], [0, 0, 1, 0, 1, 2, 0], [0, 1, 1, 0, 1, 0, 0], [0, 1, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 1, 1], [0, 1, 0, 0, 0, 0, 0], [0, 1, 0, 0, 0, 0, 0]]
+# blank = []
+# for i in range(len(s)):
+#     for j in range(len(s[0])):
+#         if s[i][j] == 0:
+#             blank.append([i, j])
+# for combi in list(combinations(blank, 3)):
+#     print(combi)
+#
 
-s = {4: [1,3], 3: [1, 9, 4, 5], 9: [8, 1, 2, 3], 8: [1, 9, 3, 4], 7: [2, 3, 4, 8], 1: [9, 2, 5, 7], 6: [5, 2, 3, 4], 5: [1, 9, 2, 8], 2: [9, 3, 1, 4]}
-a = [(0,1), (0,0), (0,1), (2,4), (0,0), (3,6)]
-print(s[4][1])
+from itertools import permutations
+from itertools import product
+
+items = [['a', 'b', 'c'], ['1', '3', '4', '5'], ['%', '@', '!!']]
+ss = ['+','+','-','*','/']
+print(len(list(permutations(ss, len(ss)))))
+
+print(int(-13/2))

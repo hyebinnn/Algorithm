@@ -8,7 +8,7 @@ n, m = map(int, sys.stdin.readline().split())
 space = []
 for _ in range(n):
     space.append(list(map(int, sys.stdin.readline().split())))
-
+print(space)
 d = [(1, 0), (-1, 0), (0, 1), (0, -1)]
 max_safe = 0
 
