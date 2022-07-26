@@ -45,7 +45,7 @@ def checkSafe(ans):
     return cnt
 
 
-def wall(cnt):  # backTracking (백트래킹) 벽 세우기
+def wall(cnt):                   # backTracking (백트래킹) 벽 세우기
     if cnt == 3:
         bfs()
         return
