@@ -6,9 +6,9 @@ N = int(input())
 meeting = []
 for _ in range(N):
     meeting.append(list(map(int, input().split())))
-print(meeting)
-meeting = sorted(meeting, key=lambda x: (x[0], x[1]))
-print(meeting)
+
+meeting.sort(key=lambda x: x[0])
+meeting.sort(key=lambda x: x[1])
 
 cnt = 1
 end = meeting[0][1]
