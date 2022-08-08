@@ -42,11 +42,9 @@ from collections import Counter
 #
 # print(int(-13/2))
 
-meeting =[[1, 4], [3, 5], [0, 6], [5, 7], [3, 8], [5, 9], [6, 10], [8, 11], [8, 12], [2, 13], [12, 14],[13,13]]
-
-m1 = sorted(meeting, key=lambda x:x[0])         # 시작시간으로 정렬
-m1 = sorted(m1, key=lambda x:x[1])              # 종료시간으로 정렬, 앞서서 시작시간으로 정렬했기 때문에, 종료시간이 같다면 시작시간이 짧은시간으로 정렬되어있음
-
-meeting = sorted(meeting, key=lambda x: (x[0], x[1]))           # 시작시간이 같으면, 종료시간이 짧은 순으로
-print(meeting)
-print(m1)
+a = [3,5,2,6,7,9,6,3,2]
+a.sort()
+print(a)
+a = [a[:3], a[4:]]
+a =
+print(a)
