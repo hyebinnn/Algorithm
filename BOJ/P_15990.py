@@ -18,3 +18,5 @@ for i in range(4, 100001):
 for _ in range(T):
     n = int(input())
     print(sum(dp[n]) % 1000000009)
+
+print(dp)
