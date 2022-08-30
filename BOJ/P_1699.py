@@ -18,7 +18,6 @@ for root in range(1, square_root+1):
 print(dp[n])
 
 '''
-print(int(sqrt(98989)))
 for i in range(1, n+1):
     square_root = int(sqrt(i))
     for j in range(1, square_root+1):
