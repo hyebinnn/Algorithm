@@ -26,7 +26,7 @@ def game(x, y, d, t):                          # d = 0: 상, d = 1: 오른쪽, d
     space[x][y] = 1
     queue.append((x, y, d, t))
     while queue:
-        # pprint(space)   
+        # pprint(space)///
         x, y, d, t= queue.popleft()
         for time, dir in snake_dis:
             time = int(time)
@@ -64,5 +64,6 @@ def game(x, y, d, t):                          # d = 0: 상, d = 1: 오른쪽, d
 
 
 
+# pprint(space)
 print(game(0, 0, 1, 0))
         
